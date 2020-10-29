@@ -1,0 +1,6 @@
+<div class="skill-list-container">
+    <div *ngFor="let skill of skills" class="skill-list-skill">
+        <span>{{ skill.name }}</span>
+        <span [innerHTML]="getStars(skill.level)"></span>
+    </div>
+</div>

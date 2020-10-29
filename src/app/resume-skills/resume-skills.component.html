@@ -1,18 +1,16 @@
-
 <h1>Skills</h1>
+<a name="skills"></a>
 <mat-tab-group mat-align-tabs="center">
   <mat-tab label="Technical">
-      <div *ngFor="let tech of technicalSkills">
-        {{tech.name}}
-      </div>
+    <app-resume-skill-list [skills]="technicalSkills"></app-resume-skill-list>
   </mat-tab>
   <mat-tab label="Systems">
-      
+    <app-resume-skill-list [skills]="systemSkills"></app-resume-skill-list>
   </mat-tab>
   <mat-tab label="Tools">
-      
+    <app-resume-skill-list [skills]="toolsSkills"></app-resume-skill-list>
   </mat-tab>
   <mat-tab label="Functionnal">
-      
+    <app-resume-skill-list [skills]="functionnalSkills"></app-resume-skill-list>
   </mat-tab>
 </mat-tab-group>

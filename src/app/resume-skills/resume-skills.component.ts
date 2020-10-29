@@ -13,7 +13,7 @@ export class ResumeSkillsComponent implements OnInit {
   toolsSkills: Skill[];
   functionnalSkills: Skill[];
 
-  constructor() { 
+  constructor() {
     this.technicalSkills = makeTechnicalSkills();
     this.systemSkills = makeSystemSkills();
     this.toolsSkills = makeToolsSkills();

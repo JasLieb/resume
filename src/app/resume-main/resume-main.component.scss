@@ -1,18 +1,32 @@
 .resume-main {
     display: flex;
     align-items: center ;
-    justify-content: space-around;
+    justify-content: space-between;
+    
 }
 
 .resume-main-img {
-    display: flex;
-    align-items: center ;
-    justify-content: space-between;
+    flex: 1 0 20%;
+    justify-content: center;
+    border-radius: 50%;
 }
 
 .resume-main-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center ;
-    justify-content: flex-start;
+    flex: 1 0 75%;
+    margin: 2em;
+
+    a {
+        margin: 0 0.5em;
+    }
+
+    .resume-main-img-link {
+        max-width: 32px;
+        max-height: 32px;
+    }
+
+    // .resume-main-links {
+    //     display: flex;
+    //     align-items: center;
+    //     justify-content: space-FLE;
+    // }
 }

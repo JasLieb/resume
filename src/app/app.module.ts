@@ -10,6 +10,7 @@ import { ResumeMainComponent } from './resume-main/resume-main.component';
 import { ResumeStudiesComponent } from './resume-studies/resume-studies.component';
 import { ResumeAccordionComponent } from './resume-accordion/resume-accordion.component';
 import { ResumeSkillsComponent } from './resume-skills/resume-skills.component';
+import { ResumeSkillListComponent } from './resume-skill-list/resume-skill-list.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { ResumeSkillsComponent } from './resume-skills/resume-skills.component';
     ResumeMainComponent,
     ResumeStudiesComponent,
     ResumeAccordionComponent,
-    ResumeSkillsComponent
+    ResumeSkillsComponent,
+    ResumeSkillListComponent,
   ],
   imports: [
     BrowserModule,
