@@ -1,11 +1,14 @@
 <ion-card>
   <ion-item>
-    <ion-icon name="pin" slot="start"></ion-icon>
-    <ion-label>{{todo.name}}</ion-label>
-    <ion-button fill="outline" slot="end" (click)="editTodo()">Edit</ion-button>
+    <ion-icon name="bookmark-outline"></ion-icon>
+    <ion-label>{{todo.name || 'Todo Name'}}</ion-label>
+    <ion-button fill="outline" slot="end" (click)="editTodo()">
+      <ion-icon name="create-outline"></ion-icon>
+      Edit
+    </ion-button>
   </ion-item>
 
-  <ion-card-content>
+  <ion-card-content *ngIf="todo.description.length > 0">
     {{todo.description}}
   </ion-card-content>
 </ion-card>
