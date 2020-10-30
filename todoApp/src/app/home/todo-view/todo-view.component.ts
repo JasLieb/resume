@@ -17,8 +17,7 @@ export class TodoViewComponent implements OnInit {
   editTodo(): void {
     const navigationExtras: NavigationExtras = {
       queryParams: {
-        name: this.todo.name,
-        description: this.todo.description,
+        id: this.todo.id
       },
     };
 
