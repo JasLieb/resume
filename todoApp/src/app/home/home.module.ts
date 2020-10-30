@@ -6,6 +6,7 @@ import { HomePage } from './home.page';
 
 import { HomePageRoutingModule } from './home-routing.module';
 import { TodoViewComponent } from './todo-view/todo-view.component';
+import { TodoEditionPage } from './todo-edition/todo-edition.page';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { TodoViewComponent } from './todo-view/todo-view.component';
   ],
   declarations: [
     HomePage,
-    TodoViewComponent
+    TodoViewComponent,
+    TodoEditionPage
   ]
 })
 export class HomePageModule {}

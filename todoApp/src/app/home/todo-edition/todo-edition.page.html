@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>todo-edition</ion-title>
+    <ion-buttons slot="primary">
+      <ion-button color="primary" (click)="saveTodo()">Save</ion-button>
+      <ion-button color="secondary" (click)="deleteTodo()">Delete</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div>
+    <ion-label>Todo name</ion-label>
+    <ion-input placeholder="Name" [value]="name"></ion-input>
+  </div>
+  <div>
+    <ion-label>Todo description</ion-label>
+    <ion-textarea placeholder="Description" [value]="description"></ion-textarea>
+  </div>
+</ion-content>

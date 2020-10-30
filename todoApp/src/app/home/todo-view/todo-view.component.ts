@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { NavigationExtras, Router } from '@angular/router';
 import { Todo } from 'src/app/entities/todo.entity';
 
 @Component({
@@ -7,11 +8,20 @@ import { Todo } from 'src/app/entities/todo.entity';
   styleUrls: ['./todo-view.component.scss'],
 })
 export class TodoViewComponent implements OnInit {
-
   @Input() todo: Todo;
 
-  constructor() { }
+  constructor(private router: Router) {}
 
   ngOnInit() {}
 
+  editTodo(): void {
+    const navigationExtras: NavigationExtras = {
+      queryParams: {
+        name: this.todo.name,
+        description: this.todo.description,
+      },
+    };
+
+    this.router.navigate(['todo'], navigationExtras);
+  }
 }

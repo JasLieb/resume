@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { makeTodo, Todo } from '../entities/todo.entity';
+import { SaveService } from './services/save.service';
 
 @Component({
   selector: 'app-home',
@@ -10,8 +11,10 @@ export class HomePage {
 
   todos: Todo[];
 
-  constructor() {
-    this.todos = [];
+  constructor(
+    private saveService: SaveService
+  ) {
+    this.todos = this.saveService.loadTodos();
   }
 
   addTodo() {
@@ -21,5 +24,7 @@ export class HomePage {
         'say hello to the world'
       )
     );
+
+    this.saveService.saveTodos(this.todos);
   }
 }
